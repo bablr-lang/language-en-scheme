@@ -25,7 +25,7 @@ describe('@bablr/language-en-scheme', () => {
   describe('SExpression', () => {
     const scheme = buildSchemeTag('SExpression');
 
-    it.skip('`()`', () => {
+    it('`()`', () => {
       expect(print(scheme`()`)).toEqual(dedent`\
 
     `);
