@@ -23,8 +23,8 @@ const print = (tree) => {
 };
 
 describe('@bablr/language-en-scheme', () => {
-  describe('SExpression', () => {
-    const scheme = buildSchemeTag('SExpression');
+  describe('SExpr', () => {
+    const scheme = buildSchemeTag('SExpr');
 
     it('`()`', () => {
       expect(print(scheme`()`)).toEqual(dedent`\
@@ -39,13 +39,13 @@ describe('@bablr/language-en-scheme', () => {
     `);
     });
 
-    it.skip('`""`', () => {
-      expect(print(scheme`""`)).toEqual(dedent`\
+    it('`#()`', () => {
+      expect(print(scheme`#()`)).toEqual(dedent`\
 `);
     });
 
-    it.skip('`" "`', () => {
-      expect(print(scheme`" "`)).toEqual(dedent`\
+    it(`'()`, () => {
+      expect(print(scheme`'()`)).toEqual(dedent`\
 
         `);
     });
